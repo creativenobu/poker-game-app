@@ -3,6 +3,7 @@
   "description": "A poker game for research development.",
   "version": "1.0.0",
   "private": true,
+  "main": "window.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/creativenull/poker-game-app.git"
@@ -20,7 +21,8 @@
     "start": "concurrently -n SERVER,LINTER \"npm:serve\" \"npm:lint\"",
     "build": "parcel build public/index.html --no-source-maps --out-dir dist --public-url .//",
     "test": "jest",
-    "clean": "rimraf .cache dist"
+    "clean": "rimraf .cache dist",
+    "electron": "electron ."
   },
   "dependencies": {
     "@creativenull/deckjs": "^1.4.3",
